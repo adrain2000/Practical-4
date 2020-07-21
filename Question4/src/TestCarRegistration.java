@@ -7,15 +7,14 @@ public class TestCarRegistration {
         CarType []carList = {new CarType("Toyota", "Vios", 1.5), new CarType("Nissan","Teanna",2.0), new CarType("Honda", "City", 1.6)};
                
         //todo:: create an array that will able to store 6 registrations
-        Registration []reg = new Registration[6];
-        
+        Registration []reg = new Registration[2];
   	
         for (int i = 0; i < reg.length; ++i) {
 
             System.out.println("\nRegistration number: " + Registration.nextRegNo);
   		
             //todo:: request and read the owner detail
-            System.out.print("Name :");
+            System.out.print("Name : ");
             String name = scan.nextLine();
                 
             System.out.print("IC no. :");
@@ -25,10 +24,10 @@ public class TestCarRegistration {
                  		
             //todo:: request and read car detail
             System.out.print("Plate No :");
-            String plateNo = scan.next();
+            String plateNo = scan.nextLine();
         
             System.out.print("Colour :");
-            String colour = scan.next();
+            String colour = scan.nextLine();
     
             System.out.print("Year :");
             int year = scan.nextInt();
@@ -50,6 +49,9 @@ public class TestCarRegistration {
             //todo:: register the car\
             Registration newReg = new Registration(car, selectedCar, owner);
             reg[i] = newReg; 
+            
+            System.out.println("Registration Completed!");
+            scan.nextLine();
                         
         }  
         //todo:: display all registration detail}    
@@ -61,6 +63,6 @@ public class TestCarRegistration {
   	System.out.printf("%-7s %-13s %-14s %-10s %-8s %-6s %-10s %-10s %5s\n", 
   		"Reg No.", "Name", "IC No.", "Plate No", "Color", "Year", "Make", "Model", "Capacity");
   	for (int i = 0; i < regArr.length; ++i) 
-  		System.out.println(regArr[i]);
+  		System.out.println(regArr[i].toString());
     }
 }
