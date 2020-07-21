@@ -7,7 +7,7 @@ public class TestCarRegistration {
         CarType []carList = {new CarType("Toyota", "Vios", 1.5), new CarType("Nissan","Teanna",2.0), new CarType("Honda", "City", 1.6)};
                
         //todo:: create an array that will able to store 6 registrations
-        Registration []reg = new Registration[1];
+        Registration []reg = new Registration[6];
         
   	
         for (int i = 0; i < reg.length; ++i) {
